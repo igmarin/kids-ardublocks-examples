@@ -1,31 +1,24 @@
-int estadoBoton = 0 ;
-
 void brilloConstante();
 void parpadear();
 
 void setup()
 {
+  pinMode( 2 , INPUT);
   pinMode( 13 , OUTPUT);
 }
 
 void loop()
 {
-  estadoBoton = 0 ;
-  // este es el que no se como ponerlo en bloque
-  //  estadoBoton = digitalRead(elPinDelBoton);
-  // 
-  if (( ( estadoBoton ) == ( 0 ) ))
-  {
-    parpadear();
-    parpadear();
-    parpadear();
-    parpadear();
-    parpadear();
-  }
-  else
+  while ( digitalRead(2) )
   {
     brilloConstante();
   }
+
+  parpadear();
+  parpadear();
+  parpadear();
+  parpadear();
+  parpadear();
   delay( 1000 );
 }
 
