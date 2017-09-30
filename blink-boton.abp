@@ -3,47 +3,69 @@
 <Pages collapsible-pages="yes" drawer-with-page="yes">
 <Page page-color="128 128 128" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1280">
 <PageBlocks>
-<Block genus-name="number" id="130">
-<Label>0</Label>
-<Location>
-<X>385</X>
-<Y>53</Y>
-</Location>
-<Plug>
-<BlockConnector con-block-id="93" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
-</Plug>
-</Block>
-<Block genus-name="setter_variable_number" id="93">
+<Block genus-name="while" id="141">
 <Location>
 <X>167</X>
 <Y>26</Y>
 </Location>
 <BeforeBlockId>89</BeforeBlockId>
-<AfterBlockId>100</AfterBlockId>
+<AfterBlockId>108</AfterBlockId>
 <Sockets num-sockets="2">
-<BlockConnector con-block-id="94" connector-kind="socket" connector-type="number" init-type="number" label="variable" position-type="single"/>
-<BlockConnector con-block-id="130" connector-kind="socket" connector-type="number" init-type="number" label="value" position-type="single"/>
+<BlockConnector con-block-id="139" connector-kind="socket" connector-type="boolean" init-type="boolean" label="test" position-type="single"/>
+<BlockConnector con-block-id="109" connector-kind="socket" connector-type="cmd" init-type="cmd" label="Commands" position-type="single"/>
 </Sockets>
 </Block>
-<Block genus-name="ifelse" id="100">
+<Block genus-name="subroutine-ref" id="108">
+<Label>parpadear</Label>
 <Location>
 <X>167</X>
-<Y>80</Y>
+<Y>92</Y>
 </Location>
-<BeforeBlockId>93</BeforeBlockId>
+<BeforeBlockId>141</BeforeBlockId>
+<AfterBlockId>125</AfterBlockId>
+</Block>
+<Block genus-name="subroutine-ref" id="125">
+<Label>parpadear</Label>
+<Location>
+<X>167</X>
+<Y>116</Y>
+</Location>
+<BeforeBlockId>108</BeforeBlockId>
+<AfterBlockId>126</AfterBlockId>
+</Block>
+<Block genus-name="subroutine-ref" id="126">
+<Label>parpadear</Label>
+<Location>
+<X>167</X>
+<Y>140</Y>
+</Location>
+<BeforeBlockId>125</BeforeBlockId>
+<AfterBlockId>127</AfterBlockId>
+</Block>
+<Block genus-name="subroutine-ref" id="127">
+<Label>parpadear</Label>
+<Location>
+<X>167</X>
+<Y>164</Y>
+</Location>
+<BeforeBlockId>126</BeforeBlockId>
+<AfterBlockId>128</AfterBlockId>
+</Block>
+<Block genus-name="subroutine-ref" id="128">
+<Label>parpadear</Label>
+<Location>
+<X>167</X>
+<Y>188</Y>
+</Location>
+<BeforeBlockId>127</BeforeBlockId>
 <AfterBlockId>110</AfterBlockId>
-<Sockets num-sockets="3">
-<BlockConnector con-block-id="97" connector-kind="socket" connector-type="boolean" init-type="boolean" label="test" position-type="single"/>
-<BlockConnector con-block-id="108" connector-kind="socket" connector-type="cmd" init-type="cmd" label="then" position-type="single"/>
-<BlockConnector con-block-id="109" connector-kind="socket" connector-type="cmd" init-type="cmd" label="else" position-type="single"/>
-</Sockets>
 </Block>
 <Block genus-name="delay" id="110">
 <Location>
 <X>167</X>
-<Y>286</Y>
+<Y>212</Y>
 </Location>
-<BeforeBlockId>100</BeforeBlockId>
+<BeforeBlockId>128</BeforeBlockId>
 <Sockets num-sockets="1">
 <BlockConnector con-block-id="111" connector-kind="socket" connector-type="number" init-type="number" label="milliseconds" position-type="single"/>
 </Sockets>
@@ -52,7 +74,7 @@
 <Label>1000</Label>
 <Location>
 <X>305</X>
-<Y>289</Y>
+<Y>215</Y>
 </Location>
 <Plug>
 <BlockConnector con-block-id="110" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
@@ -61,96 +83,31 @@
 <Block genus-name="subroutine-ref" id="109">
 <Label>brilloConstante</Label>
 <Location>
-<X>267</X>
-<Y>252</Y>
+<X>278</X>
+<Y>58</Y>
 </Location>
-<BeforeBlockId>100</BeforeBlockId>
+<BeforeBlockId>141</BeforeBlockId>
 </Block>
-<Block genus-name="subroutine-ref" id="108">
-<Label>parpadear</Label>
-<Location>
-<X>268</X>
-<Y>116</Y>
-</Location>
-<BeforeBlockId>100</BeforeBlockId>
-<AfterBlockId>125</AfterBlockId>
-</Block>
-<Block genus-name="subroutine-ref" id="125">
-<Label>parpadear</Label>
-<Location>
-<X>268</X>
-<Y>140</Y>
-</Location>
-<BeforeBlockId>108</BeforeBlockId>
-<AfterBlockId>126</AfterBlockId>
-</Block>
-<Block genus-name="subroutine-ref" id="126">
-<Label>parpadear</Label>
-<Location>
-<X>268</X>
-<Y>164</Y>
-</Location>
-<BeforeBlockId>125</BeforeBlockId>
-<AfterBlockId>127</AfterBlockId>
-</Block>
-<Block genus-name="subroutine-ref" id="127">
-<Label>parpadear</Label>
-<Location>
-<X>268</X>
-<Y>188</Y>
-</Location>
-<BeforeBlockId>126</BeforeBlockId>
-<AfterBlockId>128</AfterBlockId>
-</Block>
-<Block genus-name="subroutine-ref" id="128">
-<Label>parpadear</Label>
-<Location>
-<X>268</X>
-<Y>212</Y>
-</Location>
-<BeforeBlockId>127</BeforeBlockId>
-</Block>
-<Block genus-name="equal" id="97">
-<Location>
-<X>271</X>
-<Y>83</Y>
-</Location>
-<Plug>
-<BlockConnector con-block-id="100" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
-</Plug>
-<Sockets num-sockets="2">
-<BlockConnector con-block-id="98" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
-<BlockConnector con-block-id="99" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
-</Sockets>
-</Block>
-<Block genus-name="number" id="99">
-<Label>0</Label>
-<Location>
-<X>437</X>
-<Y>86</Y>
-</Location>
-<Plug>
-<BlockConnector con-block-id="97" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
-</Plug>
-</Block>
-<Block genus-name="variable_number" id="98">
-<Label>estadoBoton</Label>
+<Block genus-name="pin-read-digital" id="139">
 <Location>
 <X>281</X>
-<Y>86</Y>
-</Location>
-<Plug>
-<BlockConnector con-block-id="97" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
-</Plug>
-</Block>
-<Block genus-name="variable_number" id="94">
-<Label>estadoBoton</Label>
-<Location>
-<X>385</X>
 <Y>29</Y>
 </Location>
 <Plug>
-<BlockConnector con-block-id="93" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+<BlockConnector con-block-id="141" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="140" connector-kind="socket" connector-type="number" init-type="number" label="#" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="140">
+<Label>2</Label>
+<Location>
+<X>401</X>
+<Y>29</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="139" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
 </Plug>
 </Block>
 <Block genus-name="subroutine" id="112">
@@ -333,7 +290,7 @@
 <Y>18</Y>
 </Location>
 <Sockets num-sockets="1">
-<BlockConnector con-block-id="93" connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" position-type="single"/>
+<BlockConnector con-block-id="141" connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" position-type="single"/>
 </Sockets>
 </Block>
 </PageBlocks>
